@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS Store</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <header>
+        <h1>NS Store</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#" id="cart-button">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Search for products...">
+        </div>
+    </header>
+    <main>
+        <section id="filters">
+            <h2>Filter Products</h2>
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothes">Clothing</option>
+                <option value="accessories">Accessories</option>
+            </select>
+        </section>
+        <section id="product-list">
+            <h2>Products</h2>
+            <div class="product-container">
+                <div class="product" data-category="electronics" data-id="1" data-name="Smartphone" data-price="15000">
+                    <h3>Smartphone</h3>
+                    <p>Price: ₹15000</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="electronics" data-id="2" data-name="Smartwatch" data-price="3500">
+                    <h3>Smartwatch</h3>
+                    <p>Price: ₹3500</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="electronics" data-id="3" data-name="Earbuds" data-price="2000">                
+                    <h3>Earbuds</h3>
+                    <p>Price: ₹2000</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="electronics" data-id="4" data-name="Headset" data-price="1500">
+                    <h3>Headset</h3>
+                    <p>Price: ₹1500</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="clothes" data-id="5" data-name="Kurtha Set" data-price="1000">                   
+                    <h3>Kurtha Set</h3>
+                    <p>Price: ₹1000</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="clothes" data-id="6" data-name="T-shirt" data-price="500">                    
+                    <h3>T-shirt</h3>
+                    <p>Price: ₹500</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="clothes" data-id="7" data-name="Jeans" data-price="1500">                    
+                    <h3>Jeans</h3>
+                    <p>Price: ₹1500</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="clothes" data-id="8" data-name="Saree" data-price="1800">                    
+                    <h3>Saree</h3>
+                    <p>Price: ₹1800</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-id="9" data-name="Bangles" data-price="800">                   
+                    <h3>Bangles</h3>
+                    <p>Price: ₹800</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-id="10" data-name="Chain" data-price="1000">                    
+                    <h3>Chain</h3>
+                    <p>Price: ₹1000</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-id="11" data-name="Bracelet" data-price="500">                   
+                    <h3>Bracelet</h3>
+                    <p>Price: ₹500</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-id="12" data-name="Ring" data-price="300">                   
+                    <h3>Ring</h3>
+                    <p>Price: ₹300</p>
+                    <input type="number" class="quantity" value="0" min="0">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart </h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="total-price">0.00</span></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 NS Store</p>
+    </footer>
+    <script src="web.js"></script>
+</body>
+</html>
